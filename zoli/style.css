@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(#141414, #353535, #104891, #AC20E3);
+    z-index: 1;
+    position: sticky;
+}
+
+.main-div{
+    width: 75%;
+    margin: auto;
+    background-color: #f1f1f1;
+    height: 100vh;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    background-color: #D3D3D3;
+    font-size: 2rem;
+}
+
+.columns{
+    display: flex;
+
+}
+
+.columns img{
+    width: 18.75vw
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav button{
+    text-align: center;
+    width: 25vw;
+    border: 0;
+}
+
+nav button:hover{
+    background-color: hsl(0, 0%, 90%);
+}
