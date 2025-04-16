@@ -5,16 +5,18 @@
 }
 
 body{
-    background: linear-gradient(#141414, #353535, #104891, #AC20E3);
+    background: linear-gradient(#0b0b0b,#121226,#1B1C4A,#21215A,#383587,#5A4FC0,#6959D5);
     z-index: 1;
-    position: sticky;
+    background-attachment: fixed;
 }
 
 .main-div{
     width: 75%;
     margin: auto;
-    background-color: #f1f1f1;
-    height: 100vh;
+    background-color: #2C2D32;
+    border-left: #393A3F 2px solid;
+    border-right: #393A3F 2px solid;
+    height: auto;
 }
 
 header{
@@ -23,29 +25,23 @@ header{
     justify-content: center;
     height: 100px;
     background-color: #D3D3D3;
-    font-size: 2rem;
+    flex-wrap: nowrap;
 }
 
-.columns{
-    display: flex;
-
-}
-
-.columns img{
-    width: 18.75vw
+header h1{
+    font-size: 4rem;
 }
 
 nav{
     display: flex;
-    justify-content: space-between;
 }
 
 nav button{
-    text-align: center;
-    width: 25vw;
+    flex: 1;
     border: 0;
 }
 
 nav button:hover{
-    background-color: hsl(0, 0%, 90%);
+    background-color: hsl(0, 0%, 80%);
+    cursor: pointer;
 }

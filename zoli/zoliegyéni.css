@@ -1,0 +1,37 @@
+.columns{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 1.4rem;
+}
+
+.columns > div{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    background-color: #D3D3D3;
+    margin: 5px;
+    align-items: center;
+    padding: 5px;
+}
+
+.columns img{
+    max-width: 200px;
+}
+
+table{
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    background-color: aquamarine;
+    border-collapse: collapse;
+}
+
+th{
+    border: 2px solid black;
+    font-size: 1.4rem;
+}
+
+td{
+    border: 2px solid black;
+}
