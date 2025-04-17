@@ -1,0 +1,17 @@
+
+table{
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    background-color: #cacaca;
+    border-collapse: collapse;
+}
+
+th{
+    border: 2px solid black;
+    font-size: 1.4rem;
+}
+
+td{
+    border: 2px solid black;
+}

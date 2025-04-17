@@ -8,14 +8,15 @@ body{
     background: linear-gradient(#0b0b0b,#121226,#1B1C4A,#21215A,#383587,#5A4FC0,#6959D5);
     z-index: 1;
     background-attachment: fixed;
+    font-family: Verdana, sans-serif;
 }
 
 .main-div{
     width: 75%;
     margin: auto;
     background-color: #2C2D32;
-    border-left: #393A3F 2px solid;
-    border-right: #393A3F 2px solid;
+    border-left: #393A3F 0.2rem solid;
+    border-right: #393A3F 0.2rem solid;
     height: auto;
 }
 
@@ -39,9 +40,20 @@ nav{
 nav button{
     flex: 1;
     border: 0;
+    padding: 0.4rem;
+    transition: background-color 0.2s linear;
 }
 
 nav button:hover{
     background-color: hsl(0, 0%, 80%);
     cursor: pointer;
+}
+
+main{
+    padding: 0 1rem;
+}
+
+footer{
+    background-color: #202020;
+    color: white;
 }
