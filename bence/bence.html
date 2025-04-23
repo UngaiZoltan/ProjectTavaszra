@@ -3,29 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../zoli/images/icons/door-hanger.png" type="image/x-icon">
     <link rel="stylesheet" href="../zoli/style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="bence.css">
+    <title>Foglalás</title>
 </head>
 <body>
     <div class="main-div">
         <header>
-            <h1>Foglalj szobát most</h1>
+            <h1>Szobafoglalás</h1>
         </header>
 
         <nav>
             <button onclick="window.location.href='../zoli/main-page.html'">Szobáink</button>
-            <button onclick="window.location.href='../bence/bence.html'">Szobafoglalás</button>
-            <button onclick="window.location.href='../szabi/szabi.html'">Szabi</button>
+            <button onclick="window.location.href='../bence/bence.html'" class="active">Szobafoglalás</button>
+            <button onclick="window.location.href='../szabi/szabi.html'">Rólunk</button>
             <button onclick="window.location.href='../áraink/árak.html'">Áraink</button>
         </nav>
+
         <main>
-            a
+            <div class="booking-container">
+                <div class="booking-header">
+                    <img src="../bence/images/bookingheaderbg2.png" alt="hotel">
+                    <div class="booking-header-pics">
+                        <img src="../bence/images/bookingsmallpic1.png" alt="hotel">
+                        <img src="../bence/images/bookingsmallpic2.png" alt="hotel">
+                        <img src="../bence/images/bookingsmallpic3.png" alt="hotel">
+                    </div>
+                </div>
+                <div class="booking-title">
+                    <h2>Hotel Foglalás</h2>
+                    <h3>Tapasztalj meg valami újat minden pillanatban</h3>
+                </div>
+                <div class="booking-content">
+                    <div class="row">
+                        <div class="row-element">
+                            <label for="name">Név</label><br>
+                            <input type="text" placeholder="Keresztnév" id="name" required>
+                            <input type="text" placeholder="Vezetéknév" id="name" required>
+                        </div>
+                        <div class="row-element">
+                            <label for="email">Email <span>*</span></label><br>
+                            <input type="email" placeholder="Email" id="email" required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="row-element">
+                            <label for="roomtype">Szoba Típusa</label><br>
+                            <select name="rooms" id="roomtype" required>
+                                <option value="" id="option">Kérem Válasszon</option>
+                                <option value="standard-room">Alap Szoba (1 - 2 fő)</option>
+                                <option value="family-room">Családi Szoba (1 - 4 fő)</option>
+                                <option value="private-room">Privát Szoba (1 - 3 fő)</option>
+                                <option value="mix-dorm-room">Vegyes Kollégiumi Szoba (6 fő)</option>
+                                <option value="female-dorm-room">Női Kollégiumi Szoba (6 fő)</option>
+                                <option value="male-dorm-room">Férfi Kollégiumi Szoba (6 fő)</option>
+                            </select>
+                        </div>
+                        <div class="row-element">
+                            <label>Vendégek Száma <span>*</span></label><br>
+                            <input type="number" id="guests" placeholder="Pl: 2" required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="row-element">
+                            <label>Érkezési Dátum & Idő <span>*</span></label><br>
+                            <input type="date">
+                            <input type="time">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="row-element">
+                            <label>Távozási Dátum & Idő <span>*</span></label><br>
+                            <input type="date">
+                            <input type="time">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="row-element">
+                            <label>Ingyenes Felvétel? <span>*</span></label><br>
+                            <div class="radio-group">
+                                <input type="radio" id="accept" name="choose" value="accept">
+                                <label for="accept">Igen, szeretnék kérni!</label>
+                            </div>
+                            <div class="radio-group">
+                                <input type="radio" id="deny" name="choose" value="deny">
+                                <label for="deny">Nem, nem szeretnék kérni!</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="row-element">
+                            <label for="special-request">Különleges Kívánság <span>*</span></label><br>
+                            <textarea name="special-request" id="special-request" placeholder="Írja ide.."></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="submit">
+                    <button>Küldés</button>
+                </div>
+            </div>
         </main>
+
         <footer>
             a
         </footer>
 
 
     </div>
+
+    <script src="app.js"></script>
 </body>
 </html>
