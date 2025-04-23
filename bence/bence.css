@@ -1,7 +1,3 @@
-.main-div {
-    height: 120vh;
-}
-
 main {
     padding: 0;
     background-color: white;
@@ -63,26 +59,18 @@ main {
     }
 }
 
-/* .booking-content {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-} */
-
 .booking-content .row {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
     flex-flow: row wrap;
     margin: 0 /* <- 30px*/ min(150px, 15%);
-    background-color: pink;
+    /* background: #ddd; */
 }
 
 .booking-content .row .row-element {
     padding: 14px 16px;
-    width: 49%;
+    width: 50%;
 }
 
 .booking-content .row .row-element label span {
@@ -90,6 +78,7 @@ main {
 }
 
 .booking-content .row .row-element label {
+    font-size: clamp(.8rem, 1.2vw, 1.5rem);
     font-weight: 600;
 }
 
@@ -103,8 +92,7 @@ main {
 .booking-content .row:first-child {
     #name {
         margin-top: 15px;
-        min-width: 120px;
-        width: min(120px, 80%);
+        width: min(200px, 100%);
         height: 30px;
     }
     
@@ -115,14 +103,20 @@ main {
     }
 }
 
+.booking-content .row:first-child .row-element:first-child {
+    background-color: #ddd;
+}
 
 .booking-content .row:nth-child(2) {
+    flex-wrap: wrap-reverse;
+
     #roomtype {
         margin-top: 15px;
         height: 30px;
         border: 2px solid #d3d3d3;
         border-radius: 5px;
         width: 100%;
+        outline: none;
     }
     
     #guests {
@@ -132,38 +126,47 @@ main {
     }
 }
 
-.booking-content .row:nth-child(3), 
-.booking-content .row:nth-child(4) {
+.booking-content .row:nth-child(2) .row-element:last-child {
+    background-color: #ddd;
+}
+
+.booking-content .row:nth-child(3) {
     font-size: 10px;
     
     label {
-        font-size: initial;
+        font-size: clamp(.8rem, 1.2vw, 1.5rem);
     }
     
     input {
         margin-top: 15px;
         font-size: 1.5em;
-        width: min(120px, 100%);
+        width: min(220px, 100%);
+        padding: 10px 5px;
     }
 }
 
-.booking-content .row:nth-child(5) { /******/
-    background: aqua;
+.booking-content .row:nth-child(3) .row-element:first-child {
+    background-color: #ddd;
+}
 
-    .radio-group {
-        margin-top: 15px;
-    }
+.booking-content .row:nth-child(4) {
+    flex-wrap: wrap-reverse;
 
-    .radio-group input {
+    input {
+        width: 10%;
+        margin-top: 20px;
         margin-right: 5px;
     }
-}
 
-.booking-content .row:last-child {
+    label:not(:first-child) {
+        width: min(200px, 100%);
+    }
+
+
     font-size: 10px;
 
     label {
-        font-size: initial;
+        font-size: clamp(.8rem, 1.2vw, 1.5rem);
         width: initial;
     }
 
@@ -172,31 +175,60 @@ main {
         outline: none;
         border: 2px solid #d3d3d3;
         border-radius: 5px;
-        min-width: min(500px, 100%); /**/
+        width: min(500px, 100%);
         height: 150px;
         margin-top: 15px;
         padding: 12px 10px;
         font-size: 1.5em;
     }
 }
-/* 
-.booking-content .row:nth-child(even) {
+
+.booking-content .row:nth-child(4) .row-element:last-child {
     background-color: #ddd;
 }
 
-.booking-content .row:nth-child(odd) {
-    background-color: #fff;
-} */
+.submit {
+    text-align: center;
+    padding: 50px;
+}
 
+.submit > input {
+    padding: 12px 60px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    color: #fff;
+    background-color: #059862;
+    cursor: pointer;
+}
 
-/* @media screen and (max-width: 873px) {
-    .booking-content .row .row-element {
-        width: 100%
-    }
-}  */
+.submit > input:hover {
+    background-color: #059862e0
+}
 
 @media screen and (max-width: 975px) {
     .booking-content .row .row-element {
         width: 100%
     }
+}
+
+@media screen and (max-width: 532px) {
+    #name {
+        width: 100%;
+    }
+
+    input {
+        font-size: .7em;
+    }
+
+    select {
+        font-size: clamp(.8rem, 1.2vw, 1.5rem);
+    }
+}
+
+#warning,
+#arrival-warning,
+#departure-warning {
+    color: rgb(255, 0, 0)
 }
