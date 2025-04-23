@@ -39,7 +39,7 @@ const actualDate = new Date();
 const arrivalWarning = document.getElementById('arrival-warning');
 const departureWarning = document.getElementById('departure-warning');
 
-arrivalDate.addEventListener('input', () => {
+document.getElementById('form').addEventListener('input', () => {
     if (startDate < actualDate) {
         arrivalWarning.innerText = 'Az érkezési idő nem lehet a múltban!'
         setTimeout(() => {
