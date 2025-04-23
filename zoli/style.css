@@ -18,7 +18,7 @@ body{
 .main-div{
     width: 75%;
     margin: auto;
-    background-color: #2C2D32;
+    background-color: white;
     border-left: #393A3F 0.2rem solid;
     border-right: #393A3F 0.2rem solid;
     height: auto;
@@ -86,10 +86,42 @@ nav button:hover{
 }
 
 main{
-    padding: 0 1rem;
+    padding: 1rem;
 }
 
 footer{
     background-color: #202020;
     color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer i{
+    font-size: 1.4rem;
+}
+
+footer .social-media p{
+    text-align: baseline;
+}
+
+footer hr{
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, rgba(128, 128, 128, 0), #888, rgba(128, 128, 128, 0));
+}
+
+@media screen and (max-width: 775px){
+    footer{
+        display: flex;
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+
+    footer > div{
+        margin: 1rem 0;
+    }
+
+    footer p{
+        line-height: 40px;
+    }
 }
