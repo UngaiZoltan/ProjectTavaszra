@@ -25,40 +25,66 @@ guests.addEventListener('input', () => {
 
 // Guests number end
 
-// Arrival time start
+// Arrival & Departure time start
 
-const arrivalDate = document.getElementById('arrival-date').value;
-const departureDate = document.getElementById('departure-date').value;
-
-const submit = document.getElementById('submit');
-
-const startDate = new Date(arrivalDate);
-const endDate = new Date(departureDate);
-const actualDate = new Date();
+const arrivalInput = document.getElementById('arrival-date');
+const departureInput = document.getElementById('departure-date');
+const form = document.getElementById('form');
 
 const arrivalWarning = document.getElementById('arrival-warning');
 const departureWarning = document.getElementById('departure-warning');
 
-document.getElementById('form').addEventListener('input', () => {
-    if (startDate < actualDate) {
-        arrivalWarning.innerText = 'Az érkezési idő nem lehet a múltban!'
+form.addEventListener('input', () => {
+    const startDate = new Date(arrivalInput.value);
+    const endDate = new Date(departureInput.value);
+    const actualDate = new Date();
+
+    if (arrivalInput.value && startDate < actualDate.setHours(0, 0, 0, 0)) {
+        arrivalWarning.innerText = 'Az érkezési idő nem lehet a múltban!';
         setTimeout(() => {
             arrivalWarning.innerText = '';
-        }, 2000);
-        arrivalDate.value = '';
-        return;
+        }, 3000);
+        arrivalInput.value = '';
     }
-});
 
-departureDate.addEventListener('input', () => {
-    if (endDate < startDate) {
-        departureWarning.innerText = 'A távozás nem lehet hamarabb, mint az érkezés';
+    if (arrivalInput.value && departureInput.value && endDate < startDate) {
+        departureWarning.innerText = 'A távozás nem lehet hamarabb, mint az érkezés!';
         setTimeout(() => {
             departureWarning.innerText = '';
-        }, 2000);
-        departureDate.value = '';
-        return;
+        }, 3000);
+        departureInput.value = '';
     }
 });
 
-// Arrival time end
+// Arrival & Departure time end
+
+// Sikeres Foglalás start
+
+/* const successName = document.getElementById('success-name');
+const successEmail = document.getElementById('success-email');
+const successRoom = document.getElementById('success-room');
+const successGuests = document.getElementById('success-guests');
+const successArrive = document.getElementById('success-arrive');
+const successDeparture = document.getElementById('success-departure');
+const successPickup = document.getElementById('success-pickup');
+const successRequest = document.getElementById('success-request');
+
+
+let nameValue = document.getElementById('name');
+let email = document.getElementById('email');
+let room = document.getElementById('roomtype');
+let guestNumber = document.getElementById('guests');
+let accept = document.getElementById('accept');
+let deny = document.getElementById('deny');
+let request = document.getElementById('special-request');
+
+successName = `${nameValue}`;
+successEmail = `${email}`;
+successRoom = `${room}`;
+successGuests = `${guestNumber}`;
+successArrive = `${arrivalInput}`;
+successDeparture = `${departureInput}`;
+successPickup = `${accept}`;
+successRequest = `${request}`; */
+
+// Sikeres Foglalás end

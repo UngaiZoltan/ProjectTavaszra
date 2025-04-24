@@ -230,5 +230,17 @@ main {
 #warning,
 #arrival-warning,
 #departure-warning {
-    color: rgb(255, 0, 0)
+    color: rgb(255, 0, 0);
+    font-size: .75rem;
+    margin-top: 5px;
 }
+
+
+/* Sikeres foglalás start */
+
+.successful-booking-container {
+    padding: 20px;
+    width: clamp();
+}
+
+/* Sikeres foglalás end */
