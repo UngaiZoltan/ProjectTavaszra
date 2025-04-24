@@ -26,24 +26,33 @@ main{
 }
 
 main p{
-    color: white;
     text-align: center;
+    font-weight: bold;
 }
 
-.small-screen-table{
+.small-screen-tables{
     display: none;
-    width: 40%;
-    margin: 2rem auto;
 }
 
-@media only screen and (max-width: 1275px){
+#table-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit ,minmax(200px ,1fr));
+    gap: 0.4rem;
+}
+
+@media screen and (max-width: 770px){
     .big-screen-table{
         display: none;
     }
-}
 
-@media only screen and (max-width: 1275px){
-    .small-screen-table{
+    .small-screen-tables{
         display: block;
+        margin: 1rem;
+        width: fit-content;
+        margin: auto;
+    }
+
+    main{
+        padding: 2rem 1rem;
     }
 }
