@@ -24,11 +24,11 @@
         </nav>
         <main>
 
-            <p>Az árak egy éjszakára értelmezendőek!</p>
+            <h2>Az árak egy éjszakára értelmezendőek!</h2>
 
             <!--Big screen tables-->
 
-            <table class="big-screen-table">
+            <table id="big-screen-table" class="big-screen-table show">
                 <tr>
                     <th>SZOBATÍPUSOK és EXTRÁK</th>
                     <th>1 fő</th>
@@ -71,7 +71,7 @@
                 </tr>
                 <tr>
                     <td>Programbusz</td>
-                    <td>5000Ft</td>
+                    <td>50.000Ft</td>
                     <td>10.000Ft</td>
                     <td>15.000Ft</td>
                     <td>20.000Ft</td>
@@ -106,205 +106,65 @@
                 </tr>
             </table>
 
-            <!--Small screen tables-->
-<div id="table-container">
-            <table class="small-screen-tables">
-                <tr>
-                    <th colspan="2">Alap szoba (1 - 2 fő)</th>
-                </tr>
-                <tr>
-                    <td>1 fő</td>
-                    <td>35.000Ft</td>
-                </tr>
-                <tr>
-                    <td>2 fő</td>
-                    <td>70.000Ft</td>
-                </tr>
-                <tr>
-                    <td>3 fő</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td>4 fő</td>
-                    <td>-</td>
-                </tr>
-            </table>
-            <table class="small-screen-tables">
-                <tr>
-                    <th colspan="2">Családi szoba (1 - 4 fő)</th>
-                </tr>
-                <tr>
-                    <td>1 fő</td>
-                    <td>60.000Ft</td>
-                </tr>
-                <tr>
-                    <td>2 fő</td>
-                    <td>120.000Ft</td>
-                </tr>
-                <tr>
-                    <td>3 fő</td>
-                    <td>180.000Ft</td>
-                </tr>
-                <tr>
-                    <td>4 fő</td>
-                    <td>240.000Ft</td>
-                </tr>
-            </table>
-            <table class="small-screen-tables">
-                <tr>
-                    <th colspan="2">Privát szoba (1 - 3 fő)</th>
-                </tr>
-                <tr>
-                    <td>1 fő</td>
-                    <td>70.000Ft</td>
-                </tr>
-                <tr>
-                    <td>2 fő</td>
-                    <td>140.000Ft</td>
-                </tr>
-                <tr>
-                    <td>3 fő</td>
-                    <td>210.000Ft</td>
-                </tr>
-                <tr>
-                    <td>4 fő</td>
-                    <td>-</td>
-                </tr>
-            </table>
-            <table class="small-screen-tables">
-                <tr>
-                    <th colspan="2">Vegyes kollégiumi szoba</th>
-                </tr>
-                <tr>
-                    <td>Mindenki magának fizet</td>
-                    <td>Fejenként: 25.000Ft</td>
-                </tr>
+            <!--Másik táblázat változat-->
 
-            </table>
-            <table class="small-screen-tables">
+            <table id="other-version" class="other-version hidden">
                 <tr>
-                    <th colspan="2">Női kollégiumi szoba</th>
+                    <th colspan="2">Szobák</th>
                 </tr>
                 <tr>
-                    <td>Mindenki magának fizet</td>
-                    <td>Fejenként: 30.000Ft</td>
-                </tr>
-            </table>
-            <table class="small-screen-tables">
-                <tr>
-                    <th colspan="2">Férfi kollégiumi szoba</th>
+                    <td>Alap Szoba (1 - 2 fő):</td>
+                    <td>35 000Ft / Éjszaka / Fő</td>
                 </tr>
                 <tr>
-                    <td>Mindenki magának fizet</td>
-                    <td>Fejenként: 30.000Ft</td>
-                </tr>
-            </table>
-            <table class="small-screen-tables">
-                <tr>
-                    <th colspan="2">Programbusz</th>
+                    <td>Családi Szoba (1 - 4 fő):</td>
+                    <td>60 000Ft / Éjszaka / Fő</td>
                 </tr>
                 <tr>
-                    <td>1 fő</td>
-                    <td>5000Ft</td>
+                    <td>Privát Szoba (1 - 3 fő):</td>
+                    <td>70 000Ft / Éjszaka / Fő</td>
                 </tr>
                 <tr>
-                    <td>2 fő</td>
-                    <td>10.000Ft</td>
+                    <td>Vegyes Kollégiumi Szoba (6 fő):</td>
+                    <td>25 000Ft / Éjszaka / Fő</td>
                 </tr>
                 <tr>
-                    <td>3 fő</td>
-                    <td>15.000Ft</td>
+                    <td>Női Kollégiumi Szoba (6 fő):</td>
+                    <td>30 000Ft / Éjszaka / Fő</td>
                 </tr>
                 <tr>
-                    <td>4 fő</td>
-                    <td>20.000Ft</td>
-                </tr>
-            </table>
-            <table class="small-screen-tables">
-                <tr>
-                    <th colspan="2">Svédasztalos reggeli</th>
+                    <td>Férfi Kollégiumi Szoba (6 fő):</td>
+                    <td>30 000Ft / Éjszaka / Fő</td>
                 </tr>
                 <tr>
-                    <td>1 fő</td>
-                    <td>15.000Ft</td>
+                    <th colspan="2">Extrák</th>
                 </tr>
                 <tr>
-                    <td>2 fő</td>
-                    <td>30.000Ft</td>
+                    <td>Programbusz:</td>
+                    <td>50 000Ft / Fő</td>
                 </tr>
                 <tr>
-                    <td>3 fő</td>
-                    <td>45.000Ft</td>
+                    <td>Svédasztal:</td>
+                    <td>15 000Ft / Fő</td>
                 </tr>
                 <tr>
-                    <td>4 fő</td>
-                    <td>60.000Ft</td>
+                    <td>Thai masszázs:</td>
+                    <td>7 500Ft / Fő</td>
+                </tr>
+                <tr>
+                    <td>Szauna:</td>
+                    <td>2 000Ft / Fő</td>
+                </tr>
+                <tr>
+                    <td>Strand:</td>
+                    <td>5 000Ft / Fő</td>
                 </tr>
             </table>
-            <table class="small-screen-tables">
-                <tr>
-                    <th colspan="2">Thai masszázs</th>
-                </tr>
-                <tr>
-                    <td>1 fő</td>
-                    <td>7500Ft</td>
-                </tr>
-                <tr>
-                    <td>2 fő</td>
-                    <td>15.000Ft</td>
-                </tr>
-                <tr>
-                    <td>3 fő</td>
-                    <td>22.500Ft</td>
-                </tr>
-                <tr>
-                    <td>4 fő</td>
-                    <td>30.000Ft</td>
-                </tr>
-            </table>
-            <table class="small-screen-tables">
-                <tr>
-                    <th colspan="2">Szauna</th>
-                </tr>
-                <tr>
-                    <td>1 fő</td>
-                    <td>2000Ft</td>
-                </tr>
-                <tr>
-                    <td>2 fő</td>
-                    <td>4000Ft</td>
-                </tr>
-                <tr>
-                    <td>3 fő</td>
-                    <td>6000Ft</td>
-                </tr>
-                <tr>
-                    <td>4 fő</td>
-                    <td>8000Ft</td>
-                </tr>
-            </table>
-            <table class="small-screen-tables">
-                <tr>
-                    <th colspan="2">Strand</th>
-                </tr>
-                <tr>
-                    <td>1 fő</td>
-                    <td>5000Ft</td>
-                </tr>
-                <tr>
-                    <td>2 fő</td>
-                    <td>10.000Ft</td>
-                </tr>
-                <tr>
-                    <td>3 fő</td>
-                    <td>15.000Ft</td>
-                </tr>
-                <tr>
-                    <td>4 fő</td>
-                    <td>20.000Ft</td>
-                </tr>
-            </table>
+
+    <div class="btn">
+        <button onclick="changeTable()">Másik verzió</button>
     </div>
+
 
         </main>
         <footer>
@@ -339,8 +199,8 @@
                     <p>Strand</p>
             </div>
         </footer>
-
-
+    </div>
+        <script src="árak.js"></script>
     </div>
 
 </body>
