@@ -6,6 +6,10 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../zoli/style.css">
     <link rel="icon" href="../zoli/images/icons/image.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="galéria.css">
+    
+
     <title>Galéria</title>
 </head>
 <body>
@@ -23,7 +27,44 @@
         </nav>
 
         <main>
-            a
+        <h2>Strand</h2>
+            <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="kepek/strand/strand1.jpeg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="kepek/strand/strand2.jpeg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="kepek/strand/strand3.jpeg" />
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      effect: "fade",
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
         </main>
 
         <footer>
