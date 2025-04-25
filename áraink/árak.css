@@ -1,33 +1,91 @@
+*{
+    overflow-x: hidden;
+}
 
-table{
+.big-screen-table{
     margin: auto;
     width: 80%;
     text-align: center;
-    background-color: #cacaca;
+    background-color: #ddd;
     border-collapse: collapse;
-    box-shadow: 1rem 1.3rem 7px #c2c2c2;
+    width: fit-content;
 }
 
-th{
+.big-screen-table th{
     border: 2px solid black;
     font-size: 1.4rem;
 }
 
-td{
+.big-screen-table td{
     border: 2px solid black;
 }
 
-tr:nth-child(even){
-    background-color: #999999;
+.big-screen-table tr:nth-child(even){
+    background-color: white;
 }
+
+/* Másik verzió */
+
+.other-version {
+    width: fit-content;
+    margin: 30px auto 30px auto;
+    border-collapse: collapse;
+    text-align: center;
+    overflow-x: auto;
+}
+
+.other-version tr:nth-child(2n-1) {
+    background-color: #ddd;
+}
+
+.other-version th {
+    /* background-color: #ddd; */
+    padding: 5px 0;
+}
+
+.other-version td {
+    width: 50%;
+    padding: 5px 0 5px 0;
+}
+
+@media screen and (max-width: 800px) {
+    .other-version {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .other-version {
+        width: 100%;
+    }
+    .other-version td {
+        padding: 5px 18px;
+    }
+    .other-version td:first-child {
+        text-align: left;
+    }
+    .other-version td:last-child {
+        text-align: right;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .other-version {
+        overflow: hidden;
+        overflow-x: auto;
+    }
+}
+
+/* . */
 
 main{
     padding: 1rem;
 }
 
-main p{
+main h2{
     text-align: center;
     font-weight: bold;
+    margin-bottom: 15px;
 }
 
 .small-screen-tables{
@@ -40,11 +98,7 @@ main p{
     gap: 0.4rem;
 }
 
-tr:hover {
-    background-color: #dddddd;
-}
-
-@media screen and (max-width: 770px){
+ @media screen and (max-width: 770px){
     .big-screen-table{
         display: none;
     }
@@ -58,4 +112,34 @@ tr:hover {
     main{
         padding: 2rem 1rem;
     }
+} 
+
+.btn{
+    text-align: center;
+}
+
+main button{
+    padding: 12px 60px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    color: #fff;
+    background-color: #059862;
+    cursor: pointer;
+    margin: 20px 0 10px 0;
+}
+
+main button:hover{
+    background-color: #059862e0
+}
+
+/* Másik verzió */
+
+.hidden{
+    display: none;
+}
+
+.show{
+    display: block;
 }
