@@ -4,7 +4,6 @@
 
 .big-screen-table{
     margin: auto;
-    width: 80%;
     text-align: center;
     background-color: #ddd;
     border-collapse: collapse;
@@ -31,7 +30,6 @@
     margin: 30px auto 30px auto;
     border-collapse: collapse;
     text-align: center;
-    overflow-x: auto;
 }
 
 .other-version tr:nth-child(2n-1) {
@@ -70,9 +68,8 @@
 }
 
 @media screen and (max-width: 400px) {
-    .other-version {
-        overflow: hidden;
-        overflow-x: auto;
+    .other-version, .big-screen-table {
+        overflow-x: scroll;
     }
 }
 
@@ -88,10 +85,6 @@ main h2{
     margin-bottom: 15px;
 }
 
-.small-screen-tables{
-    display: none;
-}
-
 #table-container{
     display: grid;
     grid-template-columns: repeat(auto-fit ,minmax(200px ,1fr));
@@ -101,12 +94,6 @@ main h2{
  @media screen and (max-width: 770px){
     .big-screen-table{
         display: none;
-    }
-
-    .small-screen-tables{
-        display: block;
-        width: fit-content;
-        margin: auto;
     }
 
     main{
