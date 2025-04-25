@@ -44,7 +44,9 @@ form.addEventListener('input', () => {
         setTimeout(() => {
             arrivalWarning.innerText = '';
         }, 3000);
-        arrivalInput.value = '';
+        setTimeout(() => {
+            arrivalInput.value = '';
+        }, 1000);
     }
 
     if (arrivalInput.value && departureInput.value && endDate < startDate) {
@@ -52,7 +54,9 @@ form.addEventListener('input', () => {
         setTimeout(() => {
             departureWarning.innerText = '';
         }, 3000);
-        departureInput.value = '';
+        setTimeout(() => {
+            departureInput.value = '';
+        }, 1000);
     }
 });
 
@@ -78,13 +82,13 @@ let accept = document.getElementById('accept');
 let deny = document.getElementById('deny');
 let request = document.getElementById('special-request');
 
-successName = `${nameValue}`;
-successEmail = `${email}`;
-successRoom = `${room}`;
-successGuests = `${guestNumber}`;
-successArrive = `${arrivalInput}`;
-successDeparture = `${departureInput}`;
-successPickup = `${accept}`;
-successRequest = `${request}`; */
+successName.innerText = nameValue.value;
+successEmail.innerText = email.value;
+successRoom.innerText = `${room}`;
+successGuests.innerText = `${guestNumber}`;
+successArrive.innerText = `${arrivalInput}`;
+successDeparture.innerText = `${departureInput}`;
+successPickup.innerText = `${accept}`;
+successRequest.innerText = `${request}`; */
 
 // Sikeres Foglalás end

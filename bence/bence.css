@@ -243,4 +243,8 @@ main {
     width: clamp();
 }
 
+.details > p {
+    padding: 10px;
+}
+
 /* Sikeres foglalás end */

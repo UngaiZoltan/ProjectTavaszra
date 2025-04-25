@@ -104,8 +104,13 @@ footer i{
     font-size: 1.4rem;
 }
 
+footer .social-media p:hover {
+    scale: 1.03;
+}
+
 footer .social-media p{
     text-align: baseline;
+    transition: .3s;
 }
 
 footer hr{
@@ -127,5 +132,9 @@ footer hr{
 
     footer p{
         line-height: 40px;
+    }
+
+    footer .social-media p:hover {
+        scale: initial;
     }
 }
