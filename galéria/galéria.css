@@ -2,16 +2,27 @@
 .swiper {
     width: 80%;
     height: 80%;
+    margin-bottom: 80px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    padding:30px 0px;
+    border-radius: 30px;
   }
 
   .swiper-slide {
     background-position: center;
-    background-size: cover;
+    background-size:contain;
   }
 
   .swiper-slide img {
     display: block;
-    width: 100%;
+    width: 80%;
+    margin: auto;
+    /*border-radius: 15px;
+    border:1px solid #383587;*/
+  }
+
+  .swiper-button-next, .swiper-button-prev{
+    color: #383587;
   }
 main{
     padding: 20px;
@@ -19,4 +30,31 @@ main{
 h2{
     text-align: center;
     margin: 30px;
+}
+.galeriacontainer {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+.galeriacontainer  div {
+  padding: 10px;
+  text-align: center;
+}
+.galeriacontainer img{
+  width: 100%;
+  /*border:1px solid #383587;*/
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+
+@media only screen and (max-width: 910px) {
+  .galeriacontainer{
+    grid-template-columns: auto auto ;
+  }
+}
+
+hr{
+  margin: 60px;
+  border: 1px dotted #383587;
 }
