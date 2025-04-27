@@ -5,7 +5,7 @@ const warning = document.getElementById('warning');
 
 guests.defaultValue = 1;
 
-guests.addEventListener('input', () => {
+guests.addEventListener('change', () => {
     if (guests.value <= 0) {
         warning.innerText = 'A vendégek száma nem lehet kisebb vagy egyenlő 0-nál!';
         setTimeout(() => {
@@ -92,3 +92,30 @@ successPickup.innerText = `${accept}`;
 successRequest.innerText = `${request}`; */
 
 // Sikeres Foglalás end
+
+const successName = document.getElementById('success-name');
+const successEmail = document.getElementById('success-email');
+const successRoom = document.getElementById('success-room');
+const successGuests = document.getElementById('success-guests');
+const successArrive = document.getElementById('success-arrive');
+const successDeparture = document.getElementById('success-departure');
+const successPickup = document.getElementById('success-pickup');
+const successRequest = document.getElementById('success-request');
+
+// Ezek a form elemek
+const nameValue = document.getElementById('name');
+const email = document.getElementById('email');
+const room = document.getElementById('roomtype');
+const guestNumber = document.getElementById('guests');
+const accept = document.getElementById('accept');
+const request = document.getElementById('special-request');
+
+// Helyes értékek beállítása
+successName.innerText = nameValue.value;
+successEmail.innerText = email.value;
+successRoom.innerText = room.value;
+successGuests.innerText = guestNumber.value;
+successArrive.innerText = arrivalInput.value;
+successDeparture.innerText = departureInput.value;
+successPickup.innerText = accept.checked ? 'Igen' : 'Nem';
+successRequest.innerText = request.value;
