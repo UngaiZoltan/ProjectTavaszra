@@ -45,13 +45,28 @@ h2{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
-@media only screen and (max-width: 910px) {
-  .galeriacontainer{
-    grid-template-columns: auto auto ;
-  }
-}
-
 hr{
   margin: 60px;
   border: 1px dotted #383587;
+}
+
+.galeriacontainer img{
+    width: 200px;
+}
+
+.galeriacontainer{
+  display: flex;
+  flex-grow: inherit;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  min-width: 200px;
+  max-width: 1fr;
+  justify-content: center;
+}
+
+
+@media only screen and (max-width: 675px) {
+    .galeriacontainer img{
+        width: 100%;
+    }
 }
