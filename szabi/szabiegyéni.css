@@ -11,7 +11,8 @@ main p{
     text-align: justify;
 }
 main h2{
-    margin-top: 20px;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
 #etteremlista,
@@ -33,28 +34,22 @@ main li::marker {
     color: #383587;
   }
 
-#Hotelkep{
-    max-width: 300px;
-    float: right;
-    margin-left: 40px;
-}
-#szobakep{
-    max-width: 270px;
-    float: left;
-    margin-right: 40px;
-}
+
 img{
-    /*border: 4px outset #383587;*/
+    
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
     border-radius: 5px;
 }
 .jobbrakep{
     max-width: 300px;
     float: right;
-    margin-left: 40px;
+    rotate: 4deg;
+    margin: 30px 0px 30px 40px;
 }
 .balrakep{
-    max-width: 270px;
+    max-width: 300px;
     float: left;
-    margin-right: 40px;
+    rotate: -4deg;
+    margin: 30px 40px 30px 0px;
 }
+
