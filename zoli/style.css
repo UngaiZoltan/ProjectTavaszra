@@ -98,6 +98,7 @@ footer{
     color: white;
     display: flex;
     justify-content: space-around;
+    cursor: default;
 }
 
 footer i{

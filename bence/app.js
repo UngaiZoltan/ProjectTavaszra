@@ -60,6 +60,8 @@ form.addEventListener('input', () => {
     }
 });
 
+successRequest.innerText = 'Nem sikerült'
+
 // Arrival & Departure time end
 
 // Sikeres Foglalás start
@@ -117,5 +119,4 @@ successRoom.innerText = room.value;
 successGuests.innerText = guestNumber.value;
 successArrive.innerText = arrivalInput.value;
 successDeparture.innerText = departureInput.value;
-successPickup.innerText = accept.checked ? 'Igen' : 'Nem';
 successRequest.innerText = request.value;
